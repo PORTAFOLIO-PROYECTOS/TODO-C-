@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="1-Introducción.txt" />
+    <Content Include="2-Variables_Errores_Breakpoints.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
