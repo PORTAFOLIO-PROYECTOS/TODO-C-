@@ -1,0 +1,30 @@
+﻿ 2 - Variables,errores y breakpoints
+
+- En este capítulo del curso mostraremos lo que son las variables. Una variable es  un depósito donde hay un valor. 
+  Consta de un nombre y pertenece a un tipo. Debemos elegir nombres de variables representativas.
+
+- Una variable representa un valor numérico o de cadena o un objeto de una clase. El valor que la variable almacena puede cambiar, pero el nombre sigue siendo el mismo. 
+
+Tipos básicos de variables:
+
+Nombre	  Clase	    Tipo				 Ancho	Intervalo
+byte	  Byte	    Entero sin signo	 8	    0 a 255
+sbyte	  SByte	    Entero con signo 	 8	    -128 a 127
+int	      Int32	    Entero con signo	 32	    -2.147.483.648 a 2.147.483.647
+uint	  UInt32	Entero sin signo	 32	    0 a 4294967295
+short	  Int16	    Entero con signo	 16	    -32.768 a 32.767
+ushort	  UInt16	Entero sin signo	 16	    0 a 65535
+long	  Int64	    Entero con signo	 64	    -922337203685477508 a 922337203685477507
+ulong	  UInt64	Entero sin signo	 64	    0 a 18446744073709551615
+float	  Single	Punto flotante	     32	    -3,402823e38 a 3,402823e38
+double	  Double	P.Flotante doble	 64	    -1,79769313486232e308 a 1,79769313486232e308
+char	  Char	    Un carácter Unicode	 16	    Símbolos Unicode utilizados en el texto
+bool	  Boolean	Tipo  lógico	     8	    True o false
+object	  Object	Objecto padre	
+string	  String    Secuencia caracteres	
+decimal   Decimal	Tipo		fraccionario 	128	±1.0 × 10e−28 a ±7.9 × 10e28
+
+- También muestro en el video el uso de los puntos de ruptura.Los puntos de interrupción detienen la ejecución del depurador para, por ejemplo, 
+  ver el estado de las variables de código o examinar la pila de llamadas. Constituyen una de las técnicas de depuración más importantes en los cuadros de herramientas de los desarrolladores.
+
+- Tenéis más información sobre los breakpoints: https://msdn.microsoft.com/es-es/library/5557y8b4.aspx

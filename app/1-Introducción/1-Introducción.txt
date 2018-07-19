@@ -1,1 +1,21 @@
-﻿
+﻿1.Introducción.Curso de C# con Visual Studio 2017 
+
+ 1 - Objetivos del curso
+- El curso está ideado para ser desarrollado por una persona que no conoce nada de programación y  utilice C# como primer lenguaje. 
+  Si queréis aprender y dedicaros a esto es bueno tener paciencia cuando los problemas no se resuelven por completo, pero es de fundamental 
+  importancia dedicar tiempo al análisis individual de los problemas.
+
+- El entorno de desarrollo que utilizaremos para este curso de c# es Visual Studio Community 2017. Os lo podéis descargar desde 
+  aqui:https://www.visualstudio.com/es/downloads/ .Es gratuito siempre y cuandono sea para uso profesional.
+
+
+Vamos con unos conceptos básicos para iniciarse en este mundo:
+
+¿Qué es un programa?: 
+Conjunto de instrucciones que entiende un ordenador para realizar una actividad.
+La actividad fundamental del programador es resolver problemas empleando el ordenador como herramienta fundamental.
+Para la resolución de un problema hay que plantear un algoritmo, que son los pasos a seguir para resolver un problema.
+
+Diagrama de flujo: Un diagrama de flujo es la representación gráfica de un ALGORITMO. 
+https://4.bp.blogspot.com/-Kvn4vwhNJ00/WgTBEWJBMGI/AAAAAAAAACk/DImUoOYD8184ryfWmu6xGw0kpLDFWlnOwCLcBGAs/s1600/diagrama%2Bflujo%2Bfelicidad.png
+
