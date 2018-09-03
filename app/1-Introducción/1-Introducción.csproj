@@ -42,6 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="4-Bucles.cs" />
+    <Compile Include="5-Try_Catch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -51,6 +53,7 @@
   <ItemGroup>
     <Content Include="1-Introducción.txt" />
     <Content Include="2-Variables_Errores_Breakpoints.txt" />
+    <Content Include="3-If_Else_Operadores_Logicos.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
