@@ -1,0 +1,220 @@
+﻿3- IF ELSE OPERADORES LÓGICOS
+
+- Una instrucción 'if' identifica qué instrucción se debe ejecutar dependiendo del valor de una expresión 'Boolean'. 
+  En el ejemplo siguiente, la variable 'Boolean' 'result' se establece en true y, a continuación, se comprueba en la 
+  instrucción 'if'. El resultado es 'The variable is set to true'.
+
+	bool condition = true;
+
+	if (condition)
+	{
+		Console.WriteLine("The variable is set to true.");
+	}
+	else
+	{
+		Console.WriteLine("The variable is set to false.");
+	}
+
+
+- Puede ejecutar los ejemplos de este tema situándolos en el método Main de una aplicación de consola.
+	Una instrucción if en C# puede tener dos formas, tal como se muestra en el ejemplo siguiente.
+
+	// if-else statement
+	if (condition)
+	{
+		then-statement;
+	}
+	else
+	{
+		else-statement;
+	}
+	// Next statement in the program.
+
+	// if statement without an else
+	if (condition)
+	{
+		then-statement;
+	}
+	// Next statement in the program.
+
+
+- En una instrucción if-else, si condition se evalúa como true, se ejecuta then-statement . Si condition es false, se ejecuta else-statement . 
+  Puesto que condition no puede ser simultáneamente true y false, la then-statement y la else-statement de una instrucción if-else nunca se podrán 
+  ejecutar a la vez. Después de ejecutar la then-statement o la else-statement , el control se transfiere a la siguiente instrucción situada después 
+  de la instrucción if. En una instrucción if que no incluya una instrucción else , si condition es true, se ejecutará la then-statement . 
+  Si condition es false, el control se transfiere a la siguiente instrucción situada después de la instrucción if .
+  
+- Tanto la then-statement como la else-statement pueden constar de una única instrucción o de varias instrucciones entre llaves ({}). 
+  Para una única instrucción, las llaves son opcionales pero se recomiendan.
+  La instrucción o las instrucciones en la then-statement y la else-statement pueden ser de cualquier tipo, incluida otra instrucción 
+  if anidada dentro de la instrucción if . En instrucciones if anidadas, cada cláusula else pertenece a la última if que no tiene su 
+  elsecorrespondiente. En el ejemplo siguiente, Result1 aparece si m > 10 y n > 20 se evalúan como true. Si m > 10 es true, pero n > 20 es false, aparece Result2 .
+
+  // Try with m = 12 and then with m = 8.
+	int m = 12;
+	int n = 18;
+
+	if (m > 10)
+		if (n > 20)
+		{
+			Console.WriteLine("Result1");
+		}
+		else
+		{
+			Console.WriteLine("Result2");
+		}
+
+
+Ejemplo
+En el ejemplo siguiente, se escribe un carácter desde el teclado y el programa usa una instrucción if anidada para determinar si el carácter de 
+entrada es un carácter alfabético. Si el carácter de entrada es un carácter alfabético, el programa comprueba si el carácter de entrada está en 
+mayúsculas o minúsculas. Aparece un mensaje para cada caso.
+
+Console.Write("Enter a character: ");
+char c = (char)Console.Read();
+if (Char.IsLetter(c))
+{
+    if (Char.IsLower(c))
+    {
+        Console.WriteLine("The character is lowercase.");
+    }
+    else
+    {
+        Console.WriteLine("The character is uppercase.");
+    }
+}
+else
+{
+    Console.WriteLine("The character isn't an alphabetic character.");
+}
+
+//Sample Output:
+
+//Enter a character: 2
+//The character isn't an alphabetic character.
+
+//Enter a character: A
+//The character is uppercase.
+
+//Enter a character: h
+//The character is lowercase.
+
+
+También puede anidar una instrucción if dentro de un bloque else, tal como se muestra en el siguiente código parcial. 
+El ejemplo anida instrucciones if dentro de dos bloques más y, a continuación, un bloque. Los comentarios de especifican qué condiciones son true o false en cada bloque.
+
+// Change the values of these variables to test the results.
+bool Condition1 = true;
+bool Condition2 = true;
+bool Condition3 = true;
+bool Condition4 = true;
+
+if (Condition1)
+{
+    // Condition1 is true.
+}
+else if (Condition2)
+{
+    // Condition1 is false and Condition2 is true.
+}
+else if (Condition3)
+{
+    if (Condition4)
+    {
+        // Condition1 and Condition2 are false. Condition3 and Condition4 are true.
+    }
+    else
+    {
+        // Condition1, Condition2, and Condition4 are false. Condition3 is true.
+    }
+}
+else
+{
+    // Condition1, Condition2, and Condition3 are false.
+}
+
+
+El ejemplo siguiente determina si un carácter de entrada es una letra minúscula, una letra mayúscula o un número. 
+Si estas tres condiciones son false, el carácter no es un carácter alfanumérico. En el ejemplo se muestra un mensaje para cada caso.
+
+Console.Write("Enter a character: ");
+char ch = (char)Console.Read();
+
+if (Char.IsUpper(ch))
+{
+    Console.WriteLine("The character is an uppercase letter.");
+}
+else if (Char.IsLower(ch))
+{
+    Console.WriteLine("The character is a lowercase letter.");
+}
+else if (Char.IsDigit(ch))
+{
+    Console.WriteLine("The character is a number.");
+}
+else
+{
+    Console.WriteLine("The character is not alphanumeric.");
+}
+
+//Sample Input and Output:
+//Enter a character: E
+//The character is an uppercase letter.
+
+//Enter a character: e
+//The character is a lowercase letter.
+
+//Enter a character: 4
+//The character is a number.
+
+//Enter a character: =
+//The character is not alphanumeric.
+
+
+Puesto que puede ser válida tanto una instrucción del bloque else como del bloque then, puede usar cualquier expresión booleana válida para la condición. 
+Puede usar operadores lógicos tales como &&, &, ||, | y ! para hacer condiciones compuestas. En el código siguiente, se muestran algunos ejemplos:
+
+// NOT
+bool result = true;
+if (!result)
+{
+    Console.WriteLine("The condition is true (result is false).");
+}
+else
+{
+    Console.WriteLine("The condition is false (result is true).");
+}
+
+// Short-circuit AND
+int m = 9;
+int n = 7;
+int p = 5;
+if (m >= n && m >= p)
+{
+    Console.WriteLine("Nothing is larger than m.");
+}
+
+// AND and NOT
+if (m >= n && !(p > m))
+{
+    Console.WriteLine("Nothing is larger than m.");
+}
+
+// Short-circuit OR
+if (m > n || m > p)
+{
+    Console.WriteLine("m isn't the smallest.");
+}
+
+// NOT and OR
+m = 4;
+if (!(m >= n || m >= p))
+{
+    Console.WriteLine("Now m is the smallest.");
+}
+// Output:
+// The condition is false (result is true).
+// Nothing is larger than m.
+// Nothing is larger than m.
+// m isn't the smallest.
+// Now m is the smallest.
